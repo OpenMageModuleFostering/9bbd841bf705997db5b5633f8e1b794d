@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Payparts_Payment>
+      <active>enable</active>
+      <codePool>community</codePool>
+      <depends>
+        <Mage_Sales />
+        <Mage_Payment />
+      </depends>
+    </Payparts_Payment>
+  </modules>
+</config>

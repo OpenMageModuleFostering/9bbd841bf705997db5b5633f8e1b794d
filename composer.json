@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/9bbd841bf705997db5b5633f8e1b794d",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "This is new payment method.",
+    "authors": [
+    {
+        "name": "PB",
+        "email": "info@privatbank.ua"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
