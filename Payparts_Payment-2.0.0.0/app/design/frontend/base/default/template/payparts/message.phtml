@@ -64,7 +64,7 @@
         result['name'] = e.options[e.selectedIndex].getAttribute('name');
         return result;
     }
-
+    
     function periodChange(){
         var selectData = getPaySelectedAttr();
         var result = '<option disabled>Срок,мес.</option><option selected value="2">2</option>';
@@ -79,8 +79,20 @@
         document.getElementById('system-name').innerHTML = selectData['name'];
 
     }
+    function radioLisener(){
+        var radios = document.forms["co-payment-form"].elements["payment[method]"];
+        for(var i = 0, max = radios.length; i < max; i++) {
+            radios[i].onchange = function() {
+                if(document.getElementById('p_method_payparts_redirect').checked){
+                    document.getElementById("payment-buttons-container").style.display = "none";   
+                } else{
+                    document.getElementById("payment-buttons-container").style.display = "block";
+                }
+            }
+        }
+    }
+    radioLisener();
     document.getElementById("send-parts-error").style.display = "none";
-    document.getElementById("payment-buttons-container").style.display = "none";
     document.getElementById('send-period').onclick = send;
     document.getElementById('system-sel').onchange = periodChange;
 </script>

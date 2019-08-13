@@ -48,7 +48,6 @@ class Payparts_Payment_Model_Redirect extends Mage_Payment_Model_Method_Abstract
     if(!$resultToken['status']){
       Mage::throwException(Mage::helper('payparts')->__('PayParts :', $resultToken['message']));
     }
-//    die;
     return '//payparts2.privatbank.ua/ipp/v2/payment?token=' . (string)$resultToken['token'];
   }
 

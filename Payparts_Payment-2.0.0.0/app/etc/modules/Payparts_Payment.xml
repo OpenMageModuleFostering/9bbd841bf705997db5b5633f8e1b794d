@@ -2,8 +2,8 @@
 <config>
   <modules>
     <Payparts_Payment>
-      <active>enable</active>
-      <codePool>community</codePool>
+      <active>true</active>
+      <codePool>local</codePool>
       <depends>
         <Mage_Sales />
         <Mage_Payment />
